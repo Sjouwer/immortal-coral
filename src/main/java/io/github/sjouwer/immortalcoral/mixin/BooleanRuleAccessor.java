@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(BooleanRule.class)
 public interface BooleanRuleAccessor {
     @Invoker
-    static RuleType<BooleanRule> invokeOf(boolean defaultValue) {
+    static RuleType<BooleanRule> invokeCreate(boolean defaultValue) {
         throw new AssertionError();
     }
 }
