@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.sjouwer.immortalcoral.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinCoralBlockBlock",
+    "MixinCoralParentBlock",
+    "BooleanRuleAccessor",
+    "MixinGameRules"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

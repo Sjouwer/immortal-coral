@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "immortalcoral",
+  "version": "${version}",
+
+  "name": "Immortal Coral",
+  "description": "Coral will never die, even outside of water",
+  "authors": [
+    "Sjouwer"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/immortal-coral",
+    "sources": "https://github.com/Sjouwer/immortal-coral",
+    "issues": "https://github.com/Sjouwer/immortal-coral/issues"
+  },
+
+  "license": "GNU LGPLv3",
+  "icon": "assets/immortalcoral/icon.png",
+
+  "environment": "*",
+
+  "mixins": [
+    "immortalcoral.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.14.x",
+    "fabricloader": ">=0.4.0",
+    "fabric": ">=0.14.0"
+  }
+}
