@@ -7,7 +7,7 @@
     "MixinCoralBlockBlock",
     "MixinCoralParentBlock",
     "BooleanRuleAccessor",
-    "MixinGameRules"
+    "GameRulesAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
