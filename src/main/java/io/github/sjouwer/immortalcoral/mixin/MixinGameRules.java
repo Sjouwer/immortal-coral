@@ -2,16 +2,12 @@ package io.github.sjouwer.immortalcoral.mixin;
 
 import net.minecraft.world.GameRules;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(GameRules.class)
-public class MixinGameRules {
-    @Shadow
-    private static <T extends GameRules.Rule<T>> GameRules.RuleKey<T> register(String key, GameRules.RuleType<T> type) {
+public interface MixinGameRules {
+    @Invoker
+    static <T extends GameRules.Rule<T>> GameRules.Key<T> invokeRegister(String name, GameRules.Category category, GameRules.Type<T> type) {
         throw new AssertionError();
-    }
-
-    static{
-        register("immortalCoral", BooleanRuleAccessor.invokeCreate(false));
     }
 }

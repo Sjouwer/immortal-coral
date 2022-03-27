@@ -18,13 +18,18 @@
   "icon": "assets/immortalcoral/icon.png",
 
   "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.sjouwer.immortalcoral.ImmortalCoral"
+    ]
+  },
 
   "mixins": [
     "immortalcoral.mixins.json"
   ],
 
   "depends": {
-    "minecraft": "1.15.x",
-    "fabricloader": ">=0.4.0"
+    "minecraft": "1.16.x",
+    "fabricloader": ">=0.12.0"
   }
 }
