@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:water_bucket"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"},
+    {"item": "minecraft:dead_tube_coral_block"}
+  ],
+  "result": {
+    "item": "minecraft:tube_coral_block",
+    "count": 8
+  }
+}

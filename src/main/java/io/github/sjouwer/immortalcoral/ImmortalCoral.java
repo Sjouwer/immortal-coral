@@ -7,10 +7,9 @@ import static io.github.sjouwer.immortalcoral.mixin.GameRulesAccessor.invokeRegi
 import static io.github.sjouwer.immortalcoral.mixin.BooleanRuleAccessor.invokeCreate;
 
 public class ImmortalCoral implements ModInitializer {
-    public static GameRules.Key<GameRules.BooleanRule> isCoralImmortal;
+    public static final GameRules.Key<GameRules.BooleanRule> isCoralImmortal = invokeRegister("immortalCoral", GameRules.Category.MISC, invokeCreate(false));
 
     @Override
     public void onInitialize() {
-        isCoralImmortal = invokeRegister("immortalCoral", GameRules.Category.MISC, invokeCreate(false));
     }
 }

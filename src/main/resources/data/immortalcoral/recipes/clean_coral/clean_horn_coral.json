@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:water_bucket"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"},
+    {"item": "minecraft:dead_horn_coral"}
+  ],
+  "result": {
+    "item": "minecraft:horn_coral",
+    "count": 8
+  }
+}

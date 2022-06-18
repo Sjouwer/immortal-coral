@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:water_bucket"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"},
+    {"item": "minecraft:dead_bubble_coral_fan"}
+  ],
+  "result": {
+    "item": "minecraft:bubble_coral_fan",
+    "count": 8
+  }
+}
