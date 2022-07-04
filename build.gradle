@@ -21,7 +21,6 @@ dependencies {
 
     // Fabric API module
     modImplementation fabricApi.module("fabric-resource-loader-v0", project.fabric_version)
-    include fabricApi.module("fabric-resource-loader-v0", project.fabric_version)
 }
 
 processResources {
