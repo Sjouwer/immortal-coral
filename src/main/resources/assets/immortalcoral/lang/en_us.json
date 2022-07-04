@@ -1,23 +1,23 @@
 {
   "gamerule.immortalCoral": "Coral no longer dies when outside of water",
 
-  "block.minecraft.dead_tube_coral": "Smoked Tube Coral",
-  "block.minecraft.dead_tube_coral_block": "Smoked Tube Coral Block",
-  "block.minecraft.dead_tube_coral_fan": "Smoked Tube Coral Fan",
+  "minecraft:smoked_tube_coral": "Smoked Tube Coral",
+  "minecraft:smoked_tube_coral_block": "Smoked Tube Coral Block",
+  "minecraft:smoked_tube_coral_fan": "Smoked Tube Coral Fan",
 
-  "block.minecraft.dead_brain_coral": "Smoked Brain Coral",
-  "block.minecraft.dead_brain_coral_block": "Smoked Brain Coral Block",
-  "block.minecraft.dead_brain_coral_fan": "Smoked Brain Coral Fan",
+  "minecraft:smoked_brain_coral": "Smoked Brain Coral",
+  "minecraft:smoked_brain_coral_block": "Smoked Brain Coral Block",
+  "minecraft:smoked_brain_coral_fan": "Smoked Brain Coral Fan",
 
-  "block.minecraft.dead_bubble_coral": "Smoked Bubble Coral",
-  "block.minecraft.dead_bubble_coral_block": "Smoked Bubble Coral Block",
-  "block.minecraft.dead_bubble_coral_fan": "Smoked Bubble Coral Fan",
+  "minecraft:smoked_bubble_coral": "Smoked Bubble Coral",
+  "minecraft:smoked_bubble_coral_block": "Smoked Bubble Coral Block",
+  "minecraft:smoked_bubble_coral_fan": "Smoked Bubble Coral Fan",
 
-  "block.minecraft.dead_fire_coral": "Smoked Fire Coral",
-  "block.minecraft.dead_fire_coral_block": "Smoked Fire Coral Block",
-  "block.minecraft.dead_fire_coral_fan": "Smoked Fire Coral Fan",
+  "minecraft:smoked_fire_coral": "Smoked Fire Coral",
+  "minecraft:smoked_fire_coral_block": "Smoked Fire Coral Block",
+  "minecraft:smoked_fire_coral_fan": "Smoked Fire Coral Fan",
 
-  "block.minecraft.dead_horn_coral": "Smoked Horn Coral",
-  "block.minecraft.dead_horn_coral_block": "Smoked Horn Coral Block",
-  "block.minecraft.dead_horn_coral_fan": "Smoked Horn Coral Fan"
+  "minecraft:smoked_horn_coral": "Smoked Horn Coral",
+  "minecraft:smoked_horn_coral_block": "Smoked Horn Coral Block",
+  "minecraft:smoked_horn_coral_fan": "Smoked Horn Coral Fan"
 }
