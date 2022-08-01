@@ -2,10 +2,14 @@ package io.github.sjouwer.immortalcoral;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.Style;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.GameRules;
+import net.minecraft.world.World;
 
 import java.util.HashMap;
 
@@ -13,7 +17,7 @@ import static io.github.sjouwer.immortalcoral.mixin.GameRulesAccessor.invokeRegi
 import static io.github.sjouwer.immortalcoral.mixin.BooleanRuleAccessor.invokeCreate;
 
 public class ImmortalCoral implements ModInitializer {
-    public static final GameRules.Key<GameRules.BooleanRule> isCoralImmortal = invokeRegister("immortalCoral", GameRules.Category.MISC, invokeCreate(false));
+    public static final GameRules.Key<GameRules.BooleanRule> ImmortalCoralRule = invokeRegister("immortalCoral", GameRules.Category.MISC, invokeCreate(false));
     private static final HashMap<String, String> smokedNamesMap = new HashMap<>();
 
     @Override
@@ -33,6 +37,18 @@ public class ImmortalCoral implements ModInitializer {
         smokedNamesMap.put("minecraft:dead_horn_coral", "minecraft:smoked_horn_coral");
         smokedNamesMap.put("minecraft:dead_horn_coral_block", "minecraft:smoked_horn_coral_block");
         smokedNamesMap.put("minecraft:dead_horn_coral_fan", "minecraft:smoked_horn_coral_fan");
+    }
+
+    public static boolean isCoralImmortal(BlockView world) {
+        if (world instanceof World clientWorld) {
+            return clientWorld.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
+        }
+        else if (world.getClass() == ChunkRegion.class) {
+            MinecraftServer server = ((ChunkRegion)world).getServer();
+            return server != null && server.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
+        }
+
+        return false;
     }
 
     public static TranslatableText getNewNameIfDeadCoral(ItemStack itemStack) {
