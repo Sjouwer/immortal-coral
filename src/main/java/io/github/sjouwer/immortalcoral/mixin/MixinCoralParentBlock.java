@@ -1,5 +1,6 @@
 package io.github.sjouwer.immortalcoral.mixin;
 
+import io.github.sjouwer.immortalcoral.ImmortalCoral;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CoralParentBlock;
 import net.minecraft.util.math.BlockPos;
@@ -13,11 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CoralParentBlock.class)
 public class MixinCoralParentBlock {
-    private static final GameRules.RuleKey<GameRules.BooleanRule> isCoralImmortal = new GameRules.RuleKey<>("immortalCoral");
-
     @Inject(method = "isInWater", at = @At("HEAD"), cancellable = true)
     private static void isInWater(BlockState state, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> info) {
-        if (((World)world).getGameRules().getBoolean(isCoralImmortal)) {
+        if (ImmortalCoral.isCoralImmortal(world)) {
             info.setReturnValue(true);
         }
     }
