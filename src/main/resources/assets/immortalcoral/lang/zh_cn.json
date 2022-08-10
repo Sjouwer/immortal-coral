@@ -1,0 +1,18 @@
+{
+  "gamerule.immortalCoral": "珊瑚在水外不再死亡",
+  "minecraft:smoked_tube_coral": "烟熏管珊瑚色",
+  "minecraft:smoked_tube_coral_block": "烟雾管珊瑚块",
+  "minecraft:smoked_tube_coral_fan": "烟熏管珊瑚扇",
+  "minecraft:smoked_brain_coral": "熏脑珊瑚",
+  "minecraft:smoked_brain_coral_block": "烟雾脑珊瑚块",
+  "minecraft:smoked_brain_coral_fan": "熏脑珊瑚扇",
+  "minecraft:smoked_bubble_coral": "烟雾气泡珊瑚",
+  "minecraft:smoked_bubble_coral_block": "烟熏泡泡珊瑚块",
+  "minecraft:smoked_bubble_coral_fan": "烟熏泡泡珊瑚扇",
+  "minecraft:smoked_fire_coral": "烟熏火珊瑚",
+  "minecraft:smoked_fire_coral_block": "烟熏火珊瑚块",
+  "minecraft:smoked_fire_coral_fan": "烟熏火珊瑚扇",
+  "minecraft:smoked_horn_coral": "烟熏角珊瑚",
+  "minecraft:smoked_horn_coral_block": "烟熏角珊瑚块",
+  "minecraft:smoked_horn_coral_fan": "烟熏角珊瑚扇"
+}
