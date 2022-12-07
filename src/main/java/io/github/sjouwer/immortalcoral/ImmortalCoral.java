@@ -2,11 +2,11 @@ package io.github.sjouwer.immortalcoral;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.GameRules;
@@ -53,7 +53,7 @@ public class ImmortalCoral implements ModInitializer {
     }
 
     public static MutableText getNewNameIfDeadCoral(ItemStack itemStack) {
-        String id = Registry.ITEM.getId(itemStack.getItem()).toString();
+        String id = Registries.ITEM.getId(itemStack.getItem()).toString();
         if (smokedNamesMap.containsKey(id)) {
             MutableText newName = Text.translatable(smokedNamesMap.get(id));
             newName.setStyle(Style.EMPTY.withItalic(false));
