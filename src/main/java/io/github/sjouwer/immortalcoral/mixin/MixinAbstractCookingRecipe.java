@@ -19,6 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AbstractCookingRecipe.class)
 public class MixinAbstractCookingRecipe {
     @Shadow @Mutable @Final
+    protected
     ItemStack output;
 
     @Inject(method = "<init>(Lnet/minecraft/recipe/RecipeType;Lnet/minecraft/util/Identifier;Ljava/lang/String;Lnet/minecraft/recipe/book/CookingRecipeCategory;Lnet/minecraft/recipe/Ingredient;Lnet/minecraft/item/ItemStack;FI)V", at = @At("TAIL"))
