@@ -7,7 +7,6 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.recipe.book.CookingRecipeCategory;
 import net.minecraft.text.MutableText;
-import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -20,15 +19,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinAbstractCookingRecipe {
     @Shadow @Mutable @Final
     protected
-    ItemStack output;
+    ItemStack result;
 
-    @Inject(method = "<init>(Lnet/minecraft/recipe/RecipeType;Lnet/minecraft/util/Identifier;Ljava/lang/String;Lnet/minecraft/recipe/book/CookingRecipeCategory;Lnet/minecraft/recipe/Ingredient;Lnet/minecraft/item/ItemStack;FI)V", at = @At("TAIL"))
-    public void init(RecipeType type, Identifier id, String group, CookingRecipeCategory category, Ingredient input, ItemStack output, float experience, int cookTime, CallbackInfo ci) {
+    @Inject(method = "<init>(Lnet/minecraft/recipe/RecipeType;Ljava/lang/String;Lnet/minecraft/recipe/book/CookingRecipeCategory;Lnet/minecraft/recipe/Ingredient;Lnet/minecraft/item/ItemStack;FI)V", at = @At("TAIL"))
+    public void init(RecipeType<?> type, String group, CookingRecipeCategory category, Ingredient ingredient, ItemStack result, float experience, int cookingTime, CallbackInfo ci) {
         if (type == RecipeType.SMOKING){
-            MutableText outputName = ImmortalCoral.getNewNameIfDeadCoral(output);
+            MutableText outputName = ImmortalCoral.getNewNameIfDeadCoral(result);
             if (outputName != null) {
-                output.setCustomName(outputName);
-                this.output = output;
+                result.setCustomName(outputName);
+                this.result = result;
             }
         }
     }
