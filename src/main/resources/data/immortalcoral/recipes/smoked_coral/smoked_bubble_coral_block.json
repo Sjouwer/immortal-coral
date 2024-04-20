@@ -4,6 +4,11 @@
   "ingredient": {
     "item": "minecraft:bubble_coral_block"
   },
-  "result": "minecraft:dead_bubble_coral_block",
+  "result": {
+    "id": "minecraft:dead_bubble_coral_block",
+    "components": {
+      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_bubble_coral_block', italic:false}"
+    }
+  },
   "experience": 0.1
 }

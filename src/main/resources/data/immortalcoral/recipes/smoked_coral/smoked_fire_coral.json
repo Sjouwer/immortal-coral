@@ -4,6 +4,11 @@
   "ingredient": {
     "item": "minecraft:fire_coral"
   },
-  "result": "minecraft:dead_fire_coral",
+  "result": {
+    "id": "minecraft:dead_fire_coral",
+    "components": {
+      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_fire_coral', italic:false}"
+    }
+  },
   "experience": 0.1
 }

@@ -4,6 +4,11 @@
   "ingredient": {
     "item": "minecraft:tube_coral_fan"
   },
-  "result": "minecraft:dead_tube_coral_fan",
+  "result": {
+    "id": "minecraft:dead_tube_coral_fan",
+    "components": {
+      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_tube_coral_fan', italic:false}"
+    }
+  },
   "experience": 0.1
 }

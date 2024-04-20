@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "coral",
   "ingredients": [
     {"item": "minecraft:dead_bubble_coral"},
     {"item": "minecraft:dead_bubble_coral"},
@@ -12,7 +13,7 @@
     {"item": "minecraft:dead_bubble_coral"}
   ],
   "result": {
-    "item": "minecraft:bubble_coral",
+    "id": "minecraft:bubble_coral",
     "count": 8
   }
 }
