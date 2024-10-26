@@ -2,10 +2,10 @@ package io.github.sjouwer.immortalcoral;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.GameRules;
-import net.minecraft.world.World;
 
 import static io.github.sjouwer.immortalcoral.mixin.GameRulesAccessor.invokeRegister;
 import static io.github.sjouwer.immortalcoral.mixin.BooleanRuleAccessor.invokeCreate;
@@ -18,11 +18,11 @@ public class ImmortalCoral implements ModInitializer {
     }
 
     public static boolean isCoralImmortal(BlockView world) {
-        if (world instanceof World clientWorld) {
-            return clientWorld.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
+        if (world instanceof ServerWorld serverWorld) {
+            return serverWorld.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
         }
-        else if (world.getClass() == ChunkRegion.class) {
-            MinecraftServer server = ((ChunkRegion)world).getServer();
+        else if (world instanceof ChunkRegion chunkRegion) {
+            MinecraftServer server = chunkRegion.getServer();
             return server != null && server.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
         }
 

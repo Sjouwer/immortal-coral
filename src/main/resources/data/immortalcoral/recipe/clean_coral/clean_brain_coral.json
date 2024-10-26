@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "group": "coral",
   "ingredients": [
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:water_bucket"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"},
-    {"item": "minecraft:dead_brain_coral"}
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:water_bucket",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral"
   ],
   "result": {
     "id": "minecraft:brain_coral",

@@ -1,9 +1,7 @@
 {
   "type": "minecraft:smoking",
   "group": "smoked_coral",
-  "ingredient": {
-    "item": "minecraft:fire_coral"
-  },
+  "ingredient": "minecraft:fire_coral",
   "result": {
     "id": "minecraft:dead_fire_coral",
     "components": {
