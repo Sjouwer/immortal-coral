@@ -5,7 +5,11 @@
   "result": {
     "id": "minecraft:dead_horn_coral_block",
     "components": {
-      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_horn_coral_block', italic:false}"
+      "minecraft:custom_name": {
+        "type": "translatable",
+        "translate": "minecraft:smoked_horn_coral_block",
+        "italic": false
+      }
     }
   },
   "experience": 0.1

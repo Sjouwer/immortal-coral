@@ -5,7 +5,11 @@
   "result": {
     "id": "minecraft:dead_tube_coral",
     "components": {
-      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_tube_coral', italic:false}"
+      "minecraft:custom_name": {
+        "type": "translatable",
+        "translate": "minecraft:smoked_tube_coral",
+        "italic": false
+      }
     }
   },
   "experience": 0.1

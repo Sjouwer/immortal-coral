@@ -5,7 +5,11 @@
   "result": {
     "id": "minecraft:dead_fire_coral_fan",
     "components": {
-      "minecraft:custom_name": "{type: 'translatable', translate: 'minecraft:smoked_fire_coral_fan', italic:false}"
+      "minecraft:custom_name": {
+        "type": "translatable",
+        "translate": "minecraft:smoked_fire_coral_fan",
+        "italic": false
+      }
     }
   },
   "experience": 0.1
