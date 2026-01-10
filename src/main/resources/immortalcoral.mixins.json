@@ -6,8 +6,6 @@
   "mixins": [
     "MixinCoralBlockBlock",
     "MixinCoralParentBlock",
-    "BooleanRuleAccessor",
-    "GameRulesAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(CoralBlockBlock.class)
 public class MixinCoralBlockBlock {
     @Inject(method = "isInWater", at = @At("HEAD"), cancellable = true)
-    private void isInWater(BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> info) {
-        if (ImmortalCoral.isCoralImmortal(world)) {
+    private void isInWater(BlockView blockView, BlockPos pos, CallbackInfoReturnable<Boolean> info) {
+        if (ImmortalCoral.isCoralImmortal(blockView)) {
             info.setReturnValue(true);
         }
     }

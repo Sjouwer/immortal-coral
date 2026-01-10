@@ -1,29 +1,27 @@
 package io.github.sjouwer.immortalcoral;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.server.MinecraftServer;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.ChunkRegion;
-import net.minecraft.world.GameRules;
-
-import static io.github.sjouwer.immortalcoral.mixin.GameRulesAccessor.invokeRegister;
-import static io.github.sjouwer.immortalcoral.mixin.BooleanRuleAccessor.invokeCreate;
+import net.minecraft.world.rule.GameRule;
+import net.minecraft.world.rule.GameRuleCategory;
 
 public class ImmortalCoral implements ModInitializer {
-    public static final GameRules.Key<GameRules.BooleanRule> ImmortalCoralRule = invokeRegister("immortalCoral", GameRules.Category.MISC, invokeCreate(false));
+    private static final Identifier GAMERULE_IDENTIFIER = Identifier.of("immortalcoral","immortal_coral");
+    public  static final GameRule<Boolean> IMMORTAL_CORAL_GAMERULE = GameRuleBuilder
+            .forBoolean(false)
+            .category(GameRuleCategory.MISC)
+            .buildAndRegister(GAMERULE_IDENTIFIER);
 
     @Override
     public void onInitialize() {
     }
 
-    public static boolean isCoralImmortal(BlockView world) {
-        if (world instanceof ServerWorld serverWorld) {
-            return serverWorld.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
-        }
-        else if (world instanceof ChunkRegion chunkRegion) {
-            MinecraftServer server = chunkRegion.getServer();
-            return server != null && server.getGameRules().getBoolean(ImmortalCoral.ImmortalCoralRule);
+    public static boolean isCoralImmortal(BlockView blockView) {
+        if (blockView instanceof ServerWorld serverWorld) {
+            return serverWorld.getGameRules().getValue(ImmortalCoral.IMMORTAL_CORAL_GAMERULE);
         }
 
         return false;
